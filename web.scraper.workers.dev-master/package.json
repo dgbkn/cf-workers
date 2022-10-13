@@ -1,0 +1,25 @@
+{
+  "private": true,
+  "name": "web-scraper",
+  "scripts": {
+    "build": "webpack",
+    "dev": "miniflare",
+    "deploy": "wrangler publish",
+    "lint": "eslint . --fix --ext .ts"
+  },
+  "version": "1.0.0",
+  "description": "Web scraper built with Cloudflare Workers utilizing HTMLRewriter.",
+  "main": "index.js",
+  "author": "Adam Schwartz <adam.flynn.schwartz@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.10",
+    "webpack": "^5.72.0"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0",
+    "eslint": "^8.10.0",
+    "miniflare": "^2.3.0",
+    "webpack-cli": "^4.9.2"
+  }
+}

@@ -1,0 +1,13 @@
+npm run deploy
+
+npm install -g @cloudflare/wrangler
+wrangler login
+Generate a new project from reflare-template and install the dependencies.
+
+wrangler generate reflare-app https://github.com/xiaoyang-sde/reflare-template
+cd reflare-app
+npm install
+Edit or add route definitions in src/index.ts. Please read the examples and route definition section below for more details.
+
+Run npm run dev to preview Reflare with local development server provided by Miniflare.
+Run npm run deploy to publish Reflare on Cloudflare Workers.
