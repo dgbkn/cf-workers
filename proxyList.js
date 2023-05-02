@@ -94,8 +94,12 @@ async function handleRequest(request) {
 
   if (pathname.startsWith("/scrape")) {
     let proxies = await scrape(types, limit);
+    limit = parseInt(limit);
     if (limit > 0) {
-      proxies = proxies.splice(0, limit);
+      // let x = Math.floor((Math.random() * limit) + 1);
+      let y = Math.floor((Math.random() * (proxies.length - limit)) + 1);
+      console.log(y, y+limit);
+      proxies = proxies.slice(y, y+limit);
     }
     return new Response(proxies.join("\n"), {
       headers: {
